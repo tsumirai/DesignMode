@@ -2,12 +2,8 @@ package designMode;
 
 public class DesignMode {
 	public static void main(String []args) {
-		Sourceable source1 = new SourceSub1();
-		Sourceable source2 = new SourceSub2();
-
-		source1.method1();
-		source1.method2();
-		source2.method1();
-		source2.method2();
+		DecoratorSouceable source = new DecoratorSource();
+		DecoratorSouceable obj = new DecoratorClass(source);
+		obj.method();
 	}
 }
