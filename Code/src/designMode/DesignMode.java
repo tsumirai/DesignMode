@@ -2,13 +2,8 @@ package designMode;
 
 public class DesignMode {
 	public static void main(String []args) {
-		MyHandler h1 = new MyHandler("h1");
-		MyHandler h2 = new MyHandler("h2");
-		MyHandler h3 = new MyHandler("h3");
-
-		h1.setHandler(h2);
-		h2.setHandler(h3);
-
-		h1.operator();
+		//¼ÆËã9+2-8µÄÖµ
+		int result = new InterpretMinus().interpret(new InterpretContext(new InterpretPlus().interpret(new InterpretContext(9,2)),8));
+		System.out.println(result);
 	}
 }
